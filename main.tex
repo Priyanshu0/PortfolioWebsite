@@ -1,0 +1,219 @@
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+\usepackage{hyperref}
+
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{6pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Priyanshu Tuli} \\[4pt]
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{} C @{} C}
+{{\raisebox{-0.05\height}{\faEnvelope} 
+priyanshu1tuli@gmail.com}} 
+{{\href{https://www.linkedin.com/in/priyanshu-tuli/}{\raisebox{-0.05\height}{\faLinkedin} linkedin:priyanshu}}}
+{{\href{https://github.com/Priyanshu0}
+{\raisebox{-0.05\height}{\faGithubSquare} github:priyanshu}}}
+% {{\href{https://priyanshu0.github.io/resume/}
+% {\raisebox{-0.05\height}{\faPortrait} portfolio:priyanshu}}}
+{{\raisebox{-0.05\height}{\faMobile} +91 8427753296}} 
+\end{tabularx}
+
+%Professional Summary
+\section{\textbf{PROFESSIONAL SUMMARY}}
+\begin{minipage}{\linewidth}
+Data Scientist with \textbf{ 5 years of experience in the development and deployment of machine learning models} specializing in \textbf{ predictive analytics, time series forecasting, and NLP}. Proven expertise in \textbf{end-to-end model development, feature engineering, and production deployment at scale}. Proficient in \textbf{Python, Deep Learning and Machine Learning frameworks, and cloud-based production systems}.
+\end{minipage}
+%EXPERIENCE
+\section{\textbf{EXPERIENCE}}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\Large{Swiggy}} \hfill \textbf{November 2025 - Present} \\[4pt]
+\textbf{\Large{Data Scientist II}} \hfill \textbf{Bengaluru, Karnataka}\\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=4pt]
+    \item \textbf{Promises Compliance Improvement}: Improved pSLA (Promised SLA) \textbf{compliance for Instamart by 50 bps} by incorporating cart-level features and embeddings into a \textbf{probabilistic model, while balancing gap optimization} and maintaining \textbf{high serviceability across India through percentile-based targeting}. Strengthened model explainability using \textbf{Deep SHAP and Integrated Gradients for a multi-head neural network}, enabling identification of underperforming cohorts and closing the loop with more effective percentile targeting.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\Large{FourKites}} \hfill \textbf{July 2024 - November 2025} \\[4pt]
+\textbf{\Large{Senior Data Scientist}} \hfill \textbf{Chennai, Tamil Nadu}\\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=4pt]
+        % \item \textbf{ETA Prediction Enhancement}: Developed and productionized an \textbf{LSTM-based architecture} to predict single and multi-stop truck ETAs, \textbf{improving accuracy by 10–15\% through condensed historical check-call representations and focal loss plus ordinal loss weighting of ETA buckets}. Designed \textbf{backward-compatible integration with existing classical ML models} and implemented inter-service communication with the location service using 
+        % \textbf{concurrent API calls and semaphores}. Optimized latency by caching historical check-calls and minimizing API requests.
+        % \item \textbf{ETA Prediction}: Built and deployed \textbf{50+ customer-specific ETA prediction models} using a time-bucketized framework that \textbf{combined target variable clustering with hierarchical multi-class classification}. Designed a custom architecture with tailored class weights per customer to address imbalance and integrated post-processing with Kalman filters to reduce ETA volatility. This hybrid approach \textbf{outperformed traditional regression models, yielding a 30–50\% accuracy uplift across key delivery metrics like 30 min, 60 min accuracy windows, adaptive accuracy and late delivery notifications}.
+        % \item \textbf{ETA Inference Pipeline Enhancement}: Enhanced ETA prediction models by integrating \textbf{real-time target-encoded features and dynamic lagged features, through lookup tables and Redis based caching} in the inference pipeline for improving the ETA accuracy of long tailed, right skewed distributions.
+        % \item \textbf{Dwell Time Prediction}: Developed a unified predictive model to \textbf{estimate vehicle dwell time at facilities during loading/unloading for Truck Loads} with multiple delivery stops. Achieved a \textbf{40\% and 35\% improvement in accuracy for 15-minute and 30-minute accuracy thresholds}, respectively, in comparison to the baseline. Successfully productionized the solution on an \textbf{EKS cluster, enhancing downstream TL Multi-Stop ETA accuracy and providing more robust Late Reason Codes}. \textbf{Led this project independently from development to deployment}.
+        % \item \textbf{Similar Customer Identification}: Developed a custom methodology to \textbf{cluster and classify supply chain customers} based on delivery behavior, geographic routing patterns, and operational traits, \textbf{enabling accurate ETA predictions for new or low-data customers}.
+        % \item \textbf{Geospatial Data Anomaly Detection}: Developed a \textbf{geospatial outlier detection module for FTL and LTL shipments} using domain-informed thresholding to \textbf{identify off-route movements, geofence violations, rest-related and hours of service anomalies}. \textbf{Applied Isolation Forest and density-based clustering to eliminate noisy data during preprocessing, resulting in a 10–15\% improvement in ETA prediction accuracy for standard transit scenarios across multiple SLA thresholds}.
+        \item \textbf{ETA Prediction Enhancement}: Productionized \textbf{LSTM-based architecture} for single and multi-stop truck ETAs, \textbf{improving accuracy by 10–15\%} using condensed check-call representations, focal + ordinal loss weighting, and \textbf{concurrent API calls with semaphores} for optimized latency.
+        Enhanced \textbf{late delivery notification precision by 5–10\%} by integrating \textbf{appointment time bucket weightage} into the loss function using \textbf{soft labels and KL Divergence loss}.
+        \item \textbf{ETA Prediction}: Built and deployed \textbf{50+ customer-specific models} using time-bucketized classification with tailored class weights and Kalman filtering, \textbf{achieving 10–30\% accuracy uplift} across key delivery metrics versus traditional regression approaches. Introduced an \textbf{isotonic calibration method} to determine the \textbf{optimal late delivery notification probability threshold} based on journey progress.
+        \item \textbf{ETA Inference Pipeline}: Enhanced models by integrating \textbf{real-time target-encoded and dynamic lagged features via lookup tables and Redis caching}, improving accuracy for long-tailed, right-skewed distributions.
+        \item \textbf{Dwell Time Prediction}: Developed unified model for vehicle dwell time estimation at facilities, \textbf{achieving 40\% and 35\% accuracy improvements} for 15-min and 30-min thresholds. \textbf{Led end-to-end deployment on EKS cluster}.
+        \item \textbf{Similar Customer Identification}: Developed methodology to \textbf{cluster customers by delivery behavior and geographic patterns}, enabling accurate ETA predictions for new or low-data customers.
+        \item \textbf{Geospatial Anomaly Detection}: Built \textbf{outlier detection module using Isolation Forest and density-based clustering} to identify off-route movements and geofence violations, \textbf{improving ETA accuracy by 10–15\%} for happy path scenarios.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\Large{Sigmoid}} \hfill \textbf{Oct 2023 - July 2024} \\[4pt]
+\textbf{\Large{Senior Data Scientist}} \hfill \textbf{Bengaluru, Karnataka} \\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=4pt]
+        % \item \textbf{LLM testing framework}: Developed a versatile LLM testing framework capable of \textbf{evaluating custom RAG pipelines with a variety of LLMs and embedding models}, incorporating \textbf{multiple LLM judges and benchmarking metrics}. The framework also \textbf{generates synthetic question-answer pairs to provide ground truth data} for pipeline testing. Notably, the framework accommodates \textbf{GPT, LLama, and Mistral LLMs, resulting in a 30\% reduction in iteration and evaluation time}.
+        % \item \textbf{Human Activity Recognition}: \textbf{Led a team of 2 data scientists} to build an end-to-end solution for \textbf{Human Activity Recognition through sensor data signals from a digital watch and quantifying the different hand movements} in each sub-activity in the entire activity cycle for a \textbf{Fortune 500 client}. We developed a \textbf{custom hybrid approach of DNN, LSTM and CNN} models and \textbf{handcrafted the features via signal isolation and transformation techniques} to achieve results having \textbf{best accuracy of 95\% on the test dataset}.
+        % \item \textbf{PDF Chatbot}: Developed a \textbf{document based question-answering bot/ PDF chatbot} utilizing the \textbf{Langchain framework}, integrating support for 2 LLMs: \textbf{OpenAI’s GPT-3 and Meta’s Llama 2 models}. This bot proficiently addresses queries related to the context of uploaded documents (pdfs, webpages and video transcripts) through the \textbf{RAG (Retrieval Augmented Generation) Approach and also summarizes them}.
+        % \item \textbf{Shelf Arrangement KPI Compliance}: Devised \textbf{workflow and pipeline to ensure adherence to product placement standards in retail store}s, as well as automated assessment of essential metrics for \textbf{optimizing shelf arrangement and layout for consumer packaged goods (CPG) manufacturers}. This involved leveraging object detection techniques, such as \textbf{fine-tuning the YOLO V8 model for detecting objects on shelves and shelf pricetags, implementing brand detection via Google Gemini Vision Pro LLM on cropped images}, and utilizing \textbf{OpenAI CLIP model to obtain image captioning probabilities}. This resulted in a \textbf{25\% increase in product visibility and a 10\% increase in sales for a Fortune 500 client}.
+        % \item Resolved a client case study involving the \textbf{prediction of product delivery dates, navigating privileged and masked data values unsuitable for inference}. Delivered a remarkable \textbf{90\% accuracy in on-time deliveries, significantly surpassing the client's existing estimation system} and \textbf{reducing customer complaints by 40\%}.
+        % \item Built a sales alert demo for a client to provide alerts for different KPIs based on \textbf{anomaly detection using Isolation Forest and Monte Carlo Simulation techniques}. This lead to a \textbf{20\% increase in overall sales performance}.
+        \item \textbf{LLM Testing Framework}: Built framework to \textbf{evaluate custom RAG pipelines with multiple LLMs (GPT, LLama, Mistral)} and embedding models using LLM judges and synthetic Q\&A generation, \textbf{reducing iteration and evaluation time by 15-20\%}.
+        \item \textbf{Human Activity Recognition}: \textbf{Led team of 2} to build end-to-end \textbf{hybrid DNN-LSTM-CNN model with handcrafted signal features}, achieving \textbf{95\% accuracy} on sensor-based activity recognition for Fortune 500 client.
+        \item \textbf{PDF Chatbot}: Developed document Q\&A bot using \textbf{Langchain with GPT-3 and Llama 2} for RAG-based querying and summarization of PDFs, webpages, and video transcripts.
+        \item \textbf{Shelf Arrangement KPI}: Automated retail shelf compliance using \textbf{YOLO V8, Gemini Vision Pro, and OpenAI CLIP}, resulting in \textbf{25\% increase in product visibility and 10\% sales increase} for Fortune 500 client.
+        % \item \textbf{Delivery Date Prediction}: Built model handling masked data for product delivery prediction, \textbf{achieving 90\% on-time accuracy and reducing customer complaints by 40\%} versus existing system.
+        % \item \textbf{Sales Alerts}: Built anomaly detection demo using \textbf{Isolation Forest and Monte Carlo Simulation} for KPI-based alerts.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\Large{BlueOptima}} \hfill \textbf{July 2021 - Oct 2023} \\[4pt]
+\textbf{\Large{Associate Machine Learning Engineer}} (Oct 2022 - Oct 2023) \hfill \textbf{Bengaluru, Karnataka} \\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=4pt]
+        % \item \textbf{Security Vulnerability Detection Project}: Individually built the \textbf{Graph Modelling capability} and an end-to-end pipeline to detect developer induced vulnerability in static code repositories i.e Static Vulnerability Detection (SVD) project.
+        % \item \textbf{Large Graph Transformers for Code}: Experimented with various \textbf{pre-trained models such as Large Graph Transformers, StarCoder etc. and also fine tuned them for generating node feature and edge feature vectors to develop Graph NNs} for the SVD project. This resulted in achieving a \textbf{20\% uptick in the precision} of the models by having the right embeddings for the input features.
+        % \item \textbf{Graph Neural Networks for SVD}: The GNN models achieved a precision score in the range of \textbf{85\% to 95\% on natural data points for vulnerability detection in Java language for the 5 most common weakness enumerations (CWEs}), via multiple hyperparameter sweeps and benchmarking techniques along with graph data augmentation using the regex approach.
+        % \item \textbf{Graph Neural Network Interpretability}: Pioneered the capability to interpret the output of GNN models using \textbf{Captum module and Perturbrations approach}. This helped in explainability of input features and highlight of certain features. Using this \textbf{feedback loop we decreased the False Positive Rate (FPR) of our predictions and increased the AUC by 25\%}.
+        \item \textbf{Security Vulnerability Detection}: Built end-to-end \textbf{Graph Modelling pipeline} for Static Vulnerability Detection in code repositories, detecting developer-induced vulnerabilities.
+        \item \textbf{Large Graph Transformers}: Fine-tuned \textbf{pre-trained models (StarCoder, Graph Transformers)} for node/edge embeddings in Graph NNs, \textbf{achieving 20\% precision improvement}.
+        \item \textbf{Graph Neural Networks for SVD}: Developed GNN models achieving \textbf{85–95\% precision} for vulnerability detection across 5 common CWEs in Java through hyperparameter tuning and graph data augmentation.
+        \item \textbf{GNN Interpretability}: Pioneered \textbf{Captum-based model interpretation with perturbations}, using feedback loop to \textbf{decrease FPR and increase AUC by 25\%}.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\Large{Graduate Machine Learning Engineer}} (July 2021 - Sep 2022) \\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=4pt]
+        % \item \textbf{Pure Coding Time Estimation Project}: Led the \textbf{Beta Release of the Pure Coding Time Estimation (PCTE) Project} that accurately estimates coding effort (ACE) of a developer by achieving a \textbf{correlation of over 0.4 with the user coding  activity data}. The release involved building \textbf{26K + developer specific models} and outputting their generic coding behavior pattern.
+        % \item \textbf{PMUE Calculation}: Innovated the approach of calculating the Emission Matrix in the PCTE project, by developing another approach of \textbf{Peak Model Unit Equivalence (PMUE) which gives the time spent, in minutes, by a rockstar developer in churning out 1 unit of coding effort}. This is called e-value which is then used to calculate the Emission Matrix, one of the 3 inputs to the HMMs.
+        % \item \textbf{Custom Task Queues}: Implemented \textbf{Custom Task Queues using Redis backend as a POC to achieve fine parallelism on the K8s cluster} and to reduce the manual effort of scheduling runs. This \textbf{reduced the time spent on manual effort by 40\%}.
+        % \item Developed an \textbf{ETA estimation microservice tool for historical extractions of repository metrics of Clients using Time Series Forecasting and Regression modeling}. 
+        % Deployed it on an \textbf{dedicated AWS EC2 instance using 3 containers for horizontal scaling}. Built it as the \textbf{first in-house asynchronous microservice which updates the REST API request status using a polling mechanism}.
+        \item \textbf{Pure Coding Time Estimation}: Led Beta Release of PCTE project, building \textbf{26K+ developer-specific models} with \textbf{0.4+ correlation} to user coding activity data for accurate coding effort estimation.
+        \item \textbf{PMUE Calculation}: Developed \textbf{Peak Model Unit Equivalence approach} for calculating Emission Matrix in Hidden Markov Models, quantifying rockstar developer time per unit of coding effort (e-value).
+        \item \textbf{Custom Task Queues}: Implemented \textbf{Redis-backed task queues on K8s} for fine parallelism, \textbf{reducing manual scheduling effort by 40\%}.
+        \item \textbf{ETA Estimation Microservice}: Built first in-house \textbf{asynchronous microservice using time series forecasting + regression} for estimating the time to extract 36 static code metrics from historical repositories, deployed on \textbf{AWS EC2 with 3 containers} and polling-based status updates.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+    
+
+% SKILLS
+\section{\textbf{SKILLS}}
+\begin{tabularx}{\linewidth}{ @{}l r@{}}
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1em, itemsep=4pt]
+        \item \textbf{\large{Programming Languages:}} Python, Bash, SQL
+        \item \textbf{\large{ML/AI:}}Deep Learning (TensorFlow, PyTorch), NLP, Computer Vision, Graph Neural Networks, LLMs, Time Series Forecasting, Feature Engineering, Model deployment, Langchain, LlamaIndex
+        \item \textbf{\large{ML Libraries:}} Pandas, Numpy, Scikit-learn, Spacy, OpenCV, Huggingface, Psycopg, Joblib, Statsmodel, Fastapi, Flask, Redis, kafka-python, Scipy, Matplotlib, Polars, Dask, Hyperopt, NetworkX, Optuna, XGBoost, LightGBM, CatBoost
+        \item \textbf{\large{Production Systems:}} Docker, Kubernetes, Redis, Apache Airflow, Microservices, Apache Kafka, AWS EKS, AWS EC2, AWS ECS, AWS SQS, AWS S3, RabbitMQ, Celery,
+        Jenkins, GitHub Actions
+        \item \textbf{\large{Data Engineering:}}PostgreSQL, Apache Cassandra, Vector Databases, PySpark, ETL Pipelines
+        \item \textbf{\large{Specilalized:}}Geospatial Data, Retail unstructured Data, Source Code Data and Metrics, Natural Language Data
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+%EDUCATION
+\section{\textbf{EDUCATION}}
+\begin{tabularx}{\linewidth}{ @{}l r@{}}
+\textbf{\large{Thapar Institute of Engineering and Technology} - Patiala, Punjab} \hfill \textbf{July 2017 - June 2021} \\[4pt]
+\textbf{\large{B.E.in Computer Engineering}}\\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1em, itemsep=4pt]
+        \item \textbf{Specialized in Machine Learning. CGPA 8.45}.
+        \item \textbf{Capstone Project: {\href{https://www.youtube.com/watch?v=YPibb5IdCTY&t=23s} {\raisebox{-0.05\height} Smart Glasses for Visually Challenged People}}}.
+        \item Secured a position in the top ten percentile of my branch after completion of first year and received a scholarship of Rs 1,00,100.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+%CERTIFICATIONS
+\section{\textbf{CERTIFICATIONS}}
+\begin{tabularx}{\linewidth}{X X}
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1em, itemsep=4pt]
+        \item \large{\textbf{\protect{\href{https://www.credential.net/abc8b098-0b9b-4bf2-95d3-3bbea275275b#gs.5r2j3o} {\raisebox{-0.05\height} {Google TensorFlow Developer}}}}}
+        \item \large{\textbf{\protect{\href{https://internalapp.nptel.ac.in/NOC/NOC25/SEM1/Ecertificates/106/noc25-cs21/Course/NPTEL25CS21S104310209304297055.pdf} {\raisebox{-0.05\height} {NPTEL: Deep Learning}}}}}
+        \item \large{\textbf{\protect{\href{https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL19CS47S51200165191006847} {\raisebox{-0.05\height} {NPTEL: Design and Analysis of Algorithms}}}}}
+        \item \large{\textbf{\protect{\href{https://archive.nptel.ac.in/noc/Ecertificate/?q=noc19-cs08/NPTEL19CS08S21580035191053102.jpg} {\raisebox{-0.05\height} {NPTEL: Programming in Python}}}}}
+        \item \large{\textbf{\protect{\href{https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL20CS08S1PC308832} {\raisebox{-0.05\height} {NPTEL: Programming in Java}}}}}
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+\end{document}
