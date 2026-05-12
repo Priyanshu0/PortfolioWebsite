@@ -13,6 +13,8 @@ import {
   Wrench,
 } from "lucide-react";
 
+const BASE = import.meta.env.BASE_URL;
+
 const links = {
   email: "mailto:priyanshu1tuli@gmail.com",
   linkedin: "https://www.linkedin.com/in/priyanshu-tuli/",
@@ -53,7 +55,7 @@ interface CaseStudy {
 
 const caseStudies: CaseStudy[] = [
   {
-    logo: "/logos/Swiggy.png",
+    logo: `${BASE}logos/Swiggy.png`,
     title: "Instamart pSLA Compliance",
     context: "Swiggy",
     summary:
@@ -73,7 +75,7 @@ const caseStudies: CaseStudy[] = [
     tags: ["Probabilistic ML", "Embeddings", "Explainability", "Targeting"],
   },
   {
-    logo: "/logos/fourkites.png",
+    logo: `${BASE}logos/fourkites.png`,
     title: "Logistics Forecasting & Intelligence",
     context: "FourKites",
     summary:
@@ -102,7 +104,7 @@ const caseStudies: CaseStudy[] = [
     tags: ["LSTM", "Kalman Filtering", "Redis", "EKS", "Geospatial"],
   },
   {
-    logo: "/logos/sigmoid.png",
+    logo: `${BASE}logos/sigmoid.png`,
     title: "Sensor ML & Retail Vision",
     context: "Sigmoid",
     summary:
@@ -131,7 +133,7 @@ const caseStudies: CaseStudy[] = [
     tags: ["DNN", "LSTM", "CNN", "YOLO V8", "CLIP", "Fortune 500"],
   },
   {
-    logo: "/logos/blueoptima.png",
+    logo: `${BASE}logos/blueoptima.png`,
     title: "Graph ML for Code Security",
     context: "BlueOptima",
     summary:
